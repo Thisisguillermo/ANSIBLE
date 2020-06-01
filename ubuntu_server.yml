@@ -1,0 +1,19 @@
+---
+  - hosts: all
+    become: yes
+    tasks:
+    - name: Install packages
+      apt:
+        name:
+        - lynis
+        - autofs
+        - nodejs
+        - elinks
+        - shellcheck
+        - spicevd-agent
+        - vim
+        - screen
+        - virt-manager
+        - docker.io
+        state: latest
+        cache_valid_time: 3600
