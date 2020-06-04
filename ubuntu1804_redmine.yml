@@ -1,6 +1,6 @@
---
+---
   - hosts: all
-    sudo: yes
+    become: yes
     tasks:
     - name: Install packages
       apt:
@@ -11,4 +11,6 @@
         - mysql-client
         - redmine
         - redmine-mysql
-        - install ruby-dev
+        - ruby-dev
+        state: latest
+        cache_valid_time: 3600
