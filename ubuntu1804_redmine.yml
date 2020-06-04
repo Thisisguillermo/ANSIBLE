@@ -1,0 +1,14 @@
+--
+  - hosts: all
+    sudo: yes
+    tasks:
+    - name: Install packages
+      apt:
+        name:
+        - apache2
+        - libapache2-mod-passenger
+        - mysql-server
+        - mysql-client
+        - redmine
+        - redmine-mysql
+        - install ruby-dev
